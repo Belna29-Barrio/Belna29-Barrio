@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Agencia de Viajes Barrio Peral</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+.price-tag {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.image-container {
+  position: relative;
+}
+</style>
+</head>
+<body>
 
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button w3-white">AGENCIA DE VIAJES</a>
+    <a href="#about" class="w3-right w3-button w3-white">Reservas</a>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+        <div class="price-tag">€599</div>
+      </div>
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+        <div class="price-tag">€799</div>
+      </div>
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+        <div class="price-tag">€459</div>
+      </div>
+    </div>
+
+    <div class="w3-half">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+        <div class="price-tag">€699</div>
+      </div>
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+        <div class="price-tag">€899</div>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>Agencia de Viajes Barrio Peral</h2>
+  <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300&q=60" class="w3-image w3-padding-32" width="300" height="300">
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <p>¡Bienvenidos a la Agencia de Viajes Barrio Peral! Somos tu puerta de entrada a los destinos más increíbles del mundo. Ofrecemos paquetes todo incluido a precios increíbles.</p>
+    
+    <h3>Destinos Destacados</h3>
+    <p><strong>París, Francia - €599</strong>: La ciudad del amor te espera con la Torre Eiffel, el Louvre y los Campos Elíseos.</p>
+    <p><strong>Roma, Italia - €799</strong>: Descubre el Coliseo, el Vaticano y la deliciosa comida italiana.</p>
+    <p><strong>Grecia - €459</strong>: Islas paradisíacas con aguas cristalinas y ruinas antiguas.</p>
+    <p><strong>Tokio, Japón - €699</strong>: Una mezcla única de tradición y modernidad.</p>
+    <p><strong>Noruega - €899</strong>: Auroras boreales y fiordos impresionantes.</p>
+    
+    <p class="w3-large w3-text-pink">¡Reserva tu viaje soñado hoy mismo!</p>
+    <div class="w3-section">
+      <label><b>Nombre Completo</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Teléfono</b></label>
+      <input class="w3-input w3-border" type="text" required name="Phone">
+    </div>
+    <div class="w3-section">
+      <label><b>Destino de Interés</b></label>
+      <select class="w3-input w3-border" required name="Destination">
+        <option value="">Selecciona un destino</option>
+        <option value="paris">París - €599</option>
+        <option value="roma">Roma - €799</option>
+        <option value="grecia">Grecia - €459</option>
+        <option value="tokio">Tokio - €699</option>
+        <option value="noruega">Noruega - €899</option>
+      </select>
+    </div>
+    <div class="w3-section">
+      <label><b>Mensaje</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Solicitar Reserva</button>
+  </form>
+  <br>
+  <p>Contacto: 612 345 679 | viajes@barrioperal.com</p>
+  <p>Creado con <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+</body>
+</html>
