@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,104 +7,147 @@
 <title>Jorge Huertas - Portafolio</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Arial, sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 
 body {
-background: #f3f3f3;
-color: #333;
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+color: #fff;
 }
 
 /* NAVBAR */
 header {
 display: flex;
 justify-content: space-between;
-padding: 20px;
-background: white;
+padding: 20px 40px;
+background: rgba(0,0,0,0.5);
 position: sticky;
 top: 0;
+backdrop-filter: blur(10px);
 }
 
 .logo {
-font-size: 24px;
-font-weight: bold;
+font-size: 28px;
+font-weight: 800;
+color: #00d4ff;
 }
 
 nav a {
-margin: 0 10px;
+margin: 0 15px;
 text-decoration: none;
-color: #333;
+color: #fff;
+font-weight: 500;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #00d4ff;
 }
 
 /* HERO */
 .hero {
 height: 80vh;
-background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
+background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover;
 display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
+position: relative;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
 }
 
 .hero-text {
-background: rgba(0,0,0,0.5);
+position: relative;
+z-index: 10;
+color: #fff;
 padding: 20px 40px;
-border-radius: 10px;
-color: white;
+}
+
+.hero-text h2 {
+font-size: 48px;
+font-weight: 800;
+margin-bottom: 10px;
+color: #00d4ff;
 }
 
 .boton {
 display: inline-block;
-margin-top: 10px;
-padding: 10px 20px;
-background: black;
-color: white;
+margin-top: 20px;
+padding: 12px 25px;
+background: #00d4ff;
+color: #000;
+font-weight: 600;
 text-decoration: none;
-border-radius: 5px;
+border-radius: 8px;
+transition: 0.3s;
+}
+
+.boton:hover {
+background: #fff;
 }
 
 /* SOBRE MÍ */
 .sobre-mi {
-padding: 50px;
+padding: 60px 40px;
 text-align: center;
 }
 
 .avatar {
-width: 150px;
+width: 170px;
 border-radius: 50%;
-margin: 20px 0;
+border: 4px solid #00d4ff;
+margin-bottom: 20px;
 }
 
-.sobre-mi ul {
-list-style: none;
-margin-top: 20px;
+h2 {
+font-size: 38px;
+margin-bottom: 20px;
+color: #00d4ff;
 }
 
-.sobre-mi li {
-padding: 5px 0;
+.sobre-mi p {
+max-width: 700px;
+margin: auto;
+font-size: 18px;
+line-height: 1.6;
 }
 
 /* PORTAFOLIO */
 .portafolio {
-padding: 50px;
-background: white;
+padding: 60px;
+text-align: center;
 }
 
 .proyectos {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+margin-top: 30px;
 }
 
 .proyecto {
-background: #eee;
+background: rgba(255,255,255,0.08);
 padding: 15px;
-border-radius: 10px;
-text-align: center;
+border-radius: 12px;
+transition: 0.3s;
+}
+
+.proyecto:hover {
+transform: scale(1.05);
+background: rgba(255,255,255,0.15);
 }
 
 .proyecto img {
@@ -113,39 +157,41 @@ border-radius: 10px;
 
 /* CONTACTO */
 .contacto {
-padding: 50px;
+padding: 60px;
 text-align: center;
 }
 
 form {
 display: flex;
 flex-direction: column;
-width: 300px;
+width: 320px;
 margin: auto;
-gap: 10px;
+gap: 12px;
 }
 
 input, textarea {
-padding: 10px;
-border: 1px solid #aaa;
-border-radius: 5px;
+padding: 12px;
+border: none;
+border-radius: 8px;
+outline: none;
 }
 
 button {
-padding: 10px;
-background: black;
-color: white;
+padding: 12px;
+background: #00d4ff;
+color: #000;
 border: none;
+border-radius: 8px;
+font-weight: 600;
 cursor: pointer;
 }
 
 /* FOOTER */
 footer {
 text-align: center;
-padding: 20px;
-background: #222;
-color: white;
-margin-top: 20px;
+padding: 25px;
+margin-top: 40px;
+background: rgba(0,0,0,0.4);
 }
 </style>
 
@@ -166,31 +212,23 @@ margin-top: 20px;
 <!-- HERO -->
 <section id="inicio" class="hero">
 <div class="hero-text">
-<h2>¡Hola! Soy Jorge Huertas</h2>
-<p>Estudiante de 14 años • Apasionado por la tecnología • De Barrio Peral, Cartagena</p>
-<a href="#portafolio" class="boton">Ver Portafolio</a>
+<h2>Yo soy Jorge</h2>
+<p>14 años • Cartagena • Emprendedor • Futuro creador de negocios</p>
+<a href="#portafolio" class="boton">Ver mis proyectos</a>
 </div>
 </section>
 
 <!-- SOBRE MÍ -->
 <section id="sobremi" class="sobre-mi">
 <h2>Sobre mí</h2>
-
 <img src="https://i.imgur.com/4ZQZ4qV.png" class="avatar" alt="Avatar">
 
 <p>
-Soy <strong>Jorge Huertas</strong>, tengo <strong>14 años</strong> y soy de
-<strong>Barrio Peral, Cartagena</strong>.
-Me gusta la tecnología, el diseño web y aprender cosas nuevas. Me divierte crear páginas web, diseñar cosas visuales y mejorar mis habilidades paso a paso.
+Hola, soy <strong>Jorge Huertas</strong>, tengo <strong>14 años</strong> y vivo en
+<strong>Barrio Peral (Cartagena)</strong>.
+Me encanta la tecnología, el diseño web y **emprender**.
+Quiero crear mis propios proyectos, aprender cada día más y construir cosas increíbles.
 </p>
-
-<h3>Habilidades</h3>
-<ul>
-<li>HTML y CSS básico</li>
-<li>Creatividad</li>
-<li>Trabajo en equipo</li>
-<li>Aprendizaje rápido</li>
-</ul>
 </section>
 
 <!-- PORTAFOLIO -->
@@ -202,29 +240,25 @@ Me gusta la tecnología, el diseño web y aprender cosas nuevas. Me divierte cre
 <div class="proyecto">
 <img src="https://i.imgur.com/7JGdK0I.png">
 <h3>Proyecto 1</h3>
-<p>Página creada con HTML y CSS.</p>
-<a class="boton">Ver más</a>
+<p>Mi primera página profesional.</p>
 </div>
 
 <div class="proyecto">
 <img src="https://i.imgur.com/fGLY9xk.png">
 <h3>Proyecto 2</h3>
-<p>Diseño de interfaz para clase.</p>
-<a class="boton">Ver más</a>
+<p>Diseño de interfaz moderna.</p>
 </div>
 
 <div class="proyecto">
 <img src="https://i.imgur.com/zX1zL2a.png">
 <h3>Proyecto 3</h3>
-<p>Mockup gráfico representativo.</p>
-<a class="boton">Ver más</a>
+<p>Mockup creativo hecho por mí.</p>
 </div>
 
 <div class="proyecto">
 <img src="https://i.imgur.com/YE6uxXo.png">
 <h3>Proyecto 4</h3>
-<p>Ejercicio de diseño visual.</p>
-<a class="boton">Ver más</a>
+<p>Diseño visual avanzado.</p>
 </div>
 
 </div>
@@ -235,21 +269,16 @@ Me gusta la tecnología, el diseño web y aprender cosas nuevas. Me divierte cre
 <h2>Contacto</h2>
 
 <form>
-<input type="text" placeholder="Nombre" required>
-<input type="email" placeholder="Correo" required>
-<textarea placeholder="Mensaje" required></textarea>
+<input type="text" placeholder="Tu nombre" required>
+<input type="email" placeholder="Tu correo" required>
+<textarea placeholder="Escribe tu mensaje"></textarea>
 <button type="submit">Enviar</button>
 </form>
-
-<div class="redes">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="40">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="40">
-<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="40">
-</div>
 </section>
 
 <footer>
-© 2025 Jorge Huertas – Todos los derechos reservados.
+© 2025 Jorge Huertas – El futuro emprendedor más duro de Cartagena.
 </footer>
 
 </body>
+</html>
